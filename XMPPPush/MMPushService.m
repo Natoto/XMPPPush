@@ -101,8 +101,9 @@
     [notification setFireDate:[NSDate dateWithTimeIntervalSinceNow:1]];
     [notification setTimeZone:[NSTimeZone defaultTimeZone]];
     [notification setSoundName:UILocalNotificationDefaultSoundName];
-    
+     notification.applicationIconBadgeNumber = application.applicationIconBadgeNumber + 1;
     [application scheduleLocalNotification:notification];
+    
 }
 
 -(void)sendNotification:(NSString*)title message:(NSString *)message  Typeid:(NSString *)Typeid url:(NSString *)url
@@ -117,6 +118,7 @@
     [notification setFireDate:[NSDate dateWithTimeIntervalSinceNow:1]];
     [notification setTimeZone:[NSTimeZone defaultTimeZone]];
     [notification setSoundName:UILocalNotificationDefaultSoundName];
+     notification.applicationIconBadgeNumber = application.applicationIconBadgeNumber + 1;
     
     [application scheduleLocalNotification:notification];
 }

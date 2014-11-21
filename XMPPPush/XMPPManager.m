@@ -54,10 +54,10 @@
         [self setupStream];
     }
     
-    if(![self.xmppStream isConnected])
-    {
+//    if(![self.xmppStream isConnected])
+//    {
         [self myConnect];
-    }
+//    } 
     if (iq) {
         [self.xmppStream sendElement:iq];
     }

@@ -80,6 +80,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
@@ -101,6 +102,7 @@
         pushAction = notification.alertAction;
     }
     [self showAlertView:notification.alertBody];
+     application.applicationIconBadgeNumber -= 1;
 }
 
 #pragma mark - my method
